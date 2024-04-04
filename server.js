@@ -34,6 +34,10 @@ app.get('/css', (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => {
-    console.log(`Server is listening on port ${port}`);
-});
+// app.listen(port, () => {
+//     console.log(`Server is listening on port ${port}`);
+// });
+
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
