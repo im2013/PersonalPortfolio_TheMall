@@ -33,6 +33,10 @@ app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'css', 'index.css'));
 });
 
+app.use('/images', express.static(path.join(__dirname, 'public', 'images')));
+app.use('/html', express.static(path.join(__dirname, 'public', 'html')));
+app.use('/css', express.static(path.join(__dirname, 'public', 'css')));
+
 // Start the server
 // app.listen(port, () => {
 //     console.log(`Server is listening on port ${port}`);
