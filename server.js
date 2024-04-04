@@ -16,6 +16,15 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'index.html'));
 });
 
+app.get('/index.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'index.html'));
+});
+
+app.get('/conceptart.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'conceptart.html'));
+});
+
+
 app.get('/aboutme.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'aboutme.html'));
 });
