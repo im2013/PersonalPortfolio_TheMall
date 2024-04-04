@@ -108,3 +108,7 @@ body {
     overflow-x: hidden;
     height: 80vh;
 }
+
+#links a {
+    margin-right: 100px;
+}

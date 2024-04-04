@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<div id="container">
+    <!-- v-if="isVisibleNavBar" -->
+    <button id="navbarButton" @click="toggleNavBar">SHOW NAVBAR</button>
+    <div id="navigationBar" :class="{ 'visible': isVisibleNavBar }">
+
+        <h1>Contents</h1>
+        <div id="navBarContactDetails">
+            <h2>Contact</h2>
+            <ol>PEN: Amber Tamark</ol>
+            <ol>Iona Moynihan</ol>
+            <ol>GitHub: <a href="https://github.com/amber-wolf0">https://github.com/amber-wolf0</a></ol>
+            <ol>LinkedIn: <a href="https://www.linkedin.com/in/iona-moynihan-11ba15263/">https://www.linkedin.com/in/iona-moynihan-11ba15263/</a></ol>
+            <ol>Contact Email: awsocants2023@gmail.com</ol>
+        </div>
+        <h2><a href="index.html">Homepage</a></h2>
+        <h2><a href="conceptart.html">Concept Art</a></h2>
+        <h2><a href="project.html">About This Project</a></h2>
+        <h2><a href="aboutme.html">About Me</a></h2>
+    </div>
+    <body>
+        <div id="content" :class="{ 'shifted': isVisibleNavBar }">
+            <div id="contentHeader">The Mall Devlog</div>
+            <div id="scroll" style="overflow-y: scroll; height: 80vh">
+            <h1>About This Project</h1>
+            <h2>How is this project being made?</h2>
+            <h3>Tools</h3>
+            <h4>Game Engine</h4>
+                <ul>Unity Engine - Version 2022.2.19f1</ul>
+            <h4>3d Modelling, 3d Animation and Texturing</h4>
+                <ul>Blender 3d - Version 3.1.2</ul>
+            <h4>Designing, Texturing</h4>
+                <ul>Adobe Photoshop 2024</ul>
+                <ul></ul>
+            <h3>Tutorials and Sources</h3>
+                <ul>Author: Cyanilux <br> Tutorial: <a href="https://www.cyanilux.com/tutorials/toon-glass-shader-breakdown/">Toon Glass Shader Breakdown</a></ul>
+                <br>
+                <ul></ul>
+
+            <h2>Inspiration</h2>
+            <p>I felt inspired by several different things. In no particular order:</p>
+                <h3>Abandoned Exploration</h3>
+                <p>I enjoy watching videos and seeing photography of abandoned places around the world. There is a somber, lonely feeling to them.</p>
+                <img src="https://sephlawless.com/wp-content/uploads/2016/12/untitled-13.jpg" width="30%">
+                <p style="font-size: xx-small">Source: Seph Lawless</p>
+
+                <h3>The Backrooms</h3>
+                <p>The horrific idea of the Backrooms, which started as a 4chan post, really inspired me. The feeling of being in a place so familiar yet unfamiliar is so terrifying to myself.
+                    I think what makes the Backrooms so unnerving, is the feeling of 'emptiness' and the discomfort of being in a completely empty place.
+                </p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Backrooms_model.jpg" width="30%">
+                <p style="font-size: xx-small">Source: Wikipedia</p>
+
+                <h3>Being Lost in a Mall</h3>
+                <p>
+                    Being lost in a shopping center as a child is a very stressful experience, and I wanted to capture this stressful feeling within my game.
+                </p>
+
+                <h3>Exploratory Horror Games (Silent Hill Series)</h3>
+                <p>
+                    I have played the Silent Hill games using Emulator or on the Playstation 2-3 as a child, and I loved that the games were open to partially-open world, 
+                    yet filled with horror- which was unusual in the 2000-2010s, as many horror games were in enclosed, controlled environments with a more linear progression system.
+                </p>
+                <div class="tenor-gif-embed" data-postid="13493159265701652055" data-share-method="host" data-aspect-ratio="1.32979" data-width="30%"><a href="https://tenor.com/view/silent-hill-b%C3%AAbado-voltando-pra-casa-gif-13493159265701652055">Silent Hill Bêbado Voltando Pra Casa GIF</a>from <a href="https://tenor.com/search/silent+hill+b%C3%AAbado+voltando+pra+casa-gifs">Silent Hill Bêbado Voltando Pra Casa GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                <p style="font-size: xx-small">Source: Tenor</p>
+
+            <br>
+            <h2>Plans</h2>
+            <p>Producing this project may take a few years, as I am currently studying- which has taken up much of my time.</p>
+            <h3>Themes</h3>
+            <p>Horror, Mystery, Exploration</p>
+            <h3>Platforms</h3>
+            <p>[CURRENTLY] Windows, [FUTURE] Mac</p>
+            <h3>Genre</h3>
+            <p>Singleplayer, Exploration, First Person, Survival</p>
+
+            <br>
+            <h2>Plot Summary</h2>
+            <h3>Act 1 - Daytime</h3>
+            <p>You are exploring a mall with the aim to find your mother, however, if you take a detour, some malicious things may begin to happen.</p>
+            <h3>Act 2 - Nighttime</h3>
+            <p>During the night, the player can choose to hide overnight in the Mall, but you will have to avoid Security Guards and, if necessary, some benevolent entities...</p>
+            <h3>Act 3 - The Ritual</h3>
+            <p>The final act of this game is finding out the dark history of this Mall, and trying to vanquish the evil within it...</p>
+        </div>
+        </div>
+    </body>
+</div>
+
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+        }
+    });
+</script>
+
+</html>
