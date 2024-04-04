@@ -1,0 +1,48 @@
+#container {
+    display: flex;
+}
+
+body {
+    flex: 1;
+    margin: 0px;
+    transition: transform 0.3s ease;
+}
+
+#content {
+    flex: 1;
+    transform: translateX(-25%);
+    transition: transform 0.3s ease;
+    transition-duration: 0.4s;
+    overflow-y: auto;
+}
+
+#content.shifted {
+    transform: translateX(3%);
+    /* transition: transform 0.3s ease;
+    transition-duration: 0.3s; */
+}
+
+#contentHeader {
+    
+}
+
+#navigationBar {
+    width: 20%;
+    background-color: aqua;
+    margin-right: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100vh;
+    transition: transform 0.3s ease;
+    transform: translateX(-100vw);
+    transition-duration: 0.3s;
+}
+
+#navigationBar.visible {
+    transform: translateX(0);
+}
+
+#navbarButton {
+    width: 5%;
+}
+

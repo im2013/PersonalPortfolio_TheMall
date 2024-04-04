@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Page</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
 </head>
-<body>
-    <h1>Hello, World!</h1>
-    <p>This is my first HTML file.</p>
-</body>
+<div id="container">
+    <!-- v-if="isVisibleNavBar" -->
+    <button id="navbarButton" @click="toggleNavBar">SHOW HIDE NAVBAR</button>
+    <div id="navigationBar" :class="{ 'visible': isVisibleNavBar }">Navigation Bar</div>
+    <body>
+        <div id="content" :class="{ 'shifted': isVisibleNavBar }">
+            <div id="contentHeader">The Mall Devlog</div>
+            <h1>Hello, World!</h1>
+        <p>This is my first HTML file.</p>
+        </div>
+    </body>
+</div>
+
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+        }
+    });
+</script>
+
 </html>
