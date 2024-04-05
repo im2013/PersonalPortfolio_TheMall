@@ -10,22 +10,27 @@
 body {
     flex: 1;
     margin: 0px;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
     overflow: hidden;
 }
 
 #content {
+    position: absolute;
     flex: 1;
-    transform: translateX(-25%);
+    transform: translateX(8%);
     transition: transform 0.3s ease;
     transition-duration: 0.4s;
     overflow-y: auto;
     overflow-x: hidden;
     font-family: 'easvhs';
+    width: 90vw;
+    left: 0;
+    top: 0;
 }
 
 #content.shifted {
-    transform: translateX(3%);
+    transform: translateX(40%);
+    width: 70vw;
     /* transition: transform 0.3s ease;
     transition-duration: 0.3s; */
 }
@@ -35,7 +40,6 @@ body {
     height: 100px;
     font-size: 100px;
     /* background-color: #000000; */
-    color: #9b0000;
     font-family: 'easvhs';
     margin-top: 10px;
     margin-bottom: 10px;
@@ -49,7 +53,7 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     height: 100vh;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
     transform: translateX(-100vw);
     transition-duration: 0.3s;
     overflow: hidden;
@@ -99,7 +103,7 @@ body {
 /*CONCEPT ART HTML*/
 #ConceptArtBox {
     flex-direction: column;
-    background-color: red;
+    /* background-color: #dfdfdf; */
     padding: 10px;
 }
 
@@ -107,6 +111,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 80vh;
+    /* width: 90vw; */
 }
 
 #links a {

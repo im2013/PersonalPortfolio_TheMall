@@ -7,7 +7,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <title>The Mall DevBlog</title>
 </head>
+<body>
 <div id="container">
+    
     <!-- v-if="isVisibleNavBar" -->
     <button id="navbarButton" @click="toggleNavBar">SHOW NAVBAR</button>
     <div id="navigationBar" :class="{ 'visible': isVisibleNavBar }">
@@ -26,7 +28,7 @@
         <h2><a href="project.html">About This Project</a></h2>
         <h2><a href="aboutme.html">About Me</a></h2>
     </div>
-    <body>
+
         <div id="content" :class="{ 'shifted': isVisibleNavBar }">
             <div id="contentHeader">The Mall Devlog</div>
             <h1>Latest Posts</h1>
@@ -225,9 +227,8 @@
                 </div>
             </div>
         </div>
-    </body>
 </div>
-
+</body>
 <script>
     new Vue ({
         el: '#container',
