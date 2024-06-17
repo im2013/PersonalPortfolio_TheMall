@@ -34,10 +34,19 @@ app.get('/aboutme.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'aboutme.html'));
 });
 
+app.get('/demo.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'demo.html'));
+});
+
+app.get('/bugreporting.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'bugreporting.html'));
+});
+
 app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'css', 'index.css'));
 });
 
+app.use('/posts', express.static(path.join(__dirname, 'public', 'html', 'posts')));
 app.use('/images', express.static(path.join(__dirname, 'public', 'images')));
 app.use('/html', express.static(path.join(__dirname, 'public', 'html')));
 app.use('/css', express.static(path.join(__dirname, 'public', 'css')));

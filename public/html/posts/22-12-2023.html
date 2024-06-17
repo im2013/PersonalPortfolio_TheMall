@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/css/index.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <title>The Mall DevBlog</title>
 </head>
+<body>
 <div id="container">
+    
     <!-- v-if="isVisibleNavBar" -->
     <button id="navbarButton" @click="toggleNavBar">SHOW NAVBAR</button>
     <div id="navigationBar" :class="{ 'visible': isVisibleNavBar }">
@@ -28,40 +30,34 @@
         <h2><a href="/demo.html">Demo?</a></h2>
         <h2><a href="/bugreporting.html">Report a Bug!</a></h2>
     </div>
-    <body>
+
         <div id="content" :class="{ 'shifted': isVisibleNavBar }">
             <div id="contentHeader">The Mall Devlog</div>
-            <h1>About Me</h1>
-            <div id="links">
-                <a href="https://github.com/amber-wolf0">GitHub</a>
-                <a href="https://www.linkedin.com/in/iona-moynihan-11ba15263/">LinkedIn</a>
-                Discord: @amber___wolf
+            <div id="insidePost">
+                    <h2>3d Modelling some clothes and a wolf</h2>
+                    <h3>22-12-2023</h3>
+                    <p>On this day I decided to primarily focus on 3d modelling and texturing.<br>
+                        I made a wolf with some variant textures, and I made some new clothes for the base human model.</p>
+                        <img src="/images/jacket1.png" width="45%">
+                        <img src="/images/jacket2.png" width="45%">
+                        <img src="/images/jacket3.png" width="45%">
+                        <img src="/images/jacket4.png" width="45%">
+                        <img src="/images/jacket5.png" width="45%">
+                        <p>The wolf model in question:</p>
+                        <img src="/images/wolf.png">
+                        <p>I also gave it some early animations:</p>
+                        <video width="50%" height="50%" controls>
+                            <source src="/images/wolfvideo.mp4" type="video/mp4">
+                        </video>
+                        <p>Some reskins and animations:</p>
+                        <img src="/images/doge.png" width="45%">
+                        <video width="50%" height="50%" controls>
+                            <source src="/images/2023-12-22 18-11-06.mp4" type="video/mp4">
+                        </video>
+                </div>
             </div>
-            <br>
-            <p>I'm a to-be Software Engineer currently studying at HWU, I am an artist and game developer in my spare time.</p>
-            <br>
-            <h2>Education</h2>
-            <h3>MEng Software Engineering - Heriot-Watt Univeristy - Ongoing</h3>
-            <p>I have been studying MEng Software Engineering since 2022, so far I've studied in my modules:</p>
-                <ul>Data Structures (e.g. Red-Black Trees, Queues)</ul>
-                <ul>Sorting Algorithms (e.g. FIFO, LIFO)</ul>
-                <ul>Artificial Intelligence</ul>
-                <ul>Concurrency (e.g. Threading, Monitors)</ul>
-                <ul>Various Programming Languages (e.g. Java, C, Python)</ul>
-
-            <h3>Other Education</h3>
-            <p>I am self-taught in many languages, IDE, and other tools, such as the following:</p>
-            <h4>Tools and Experience</h4>
-                <ul>Blender 3d (since 2015)</ul>
-                <ul>Unity 3d (since 2019)</ul>
-                <ul>Visual Studio Code (since 2018)</ul>
-                <ul>Adobe Photoshop (since 2020)</ul>
-                <ul>PaintTool SAI (2013-2020)</ul>
-                <ul>Visual Studio (2019-2021)</ul>
-        </div>
-    </body>
 </div>
-
+</body>
 <script>
     new Vue ({
         el: '#container',
