@@ -284,6 +284,7 @@
 @media only screen and (max-width: 500px) and (max-height: 1000px) { 
     #container {
         display: flex;
+        height: 100lvh;
     }
 
     #postBox {
@@ -318,11 +319,12 @@
 
     #posts {
         width: 95%;
+        height: 100lvh;
     }
 
     #insidePost {
         overflow-y: auto;
-        max-height: 80vh;
+        max-height: 80lvh;
     }
     
     body {
@@ -344,6 +346,7 @@
         width: 80vw;
         left: 0;
         top: 0;
+        height: 100lvh;
     }
     
     #content.shifted {
@@ -479,7 +482,7 @@
 
     #insidePost {
         overflow-y: auto;
-        max-height: 80vh;
+        max-height: 80lvh;
     }
 
     #postContent img {
@@ -508,6 +511,7 @@
         width: 85vw;
         left: 0;
         top: 0;
+        height: 100lvh;
     }
     
     #content.shifted {
@@ -624,9 +628,10 @@
         overflow-y: hidden;
         overflow-x: hidden;
         font-family: 'easvhs';
-        width: 70vw;
+        width: 80vw;
         left: 0;
         top: 0;
+        height: 100lvh;
     }
     
     #content.shifted {
@@ -653,7 +658,7 @@
         margin-right: 5px;
         flex-wrap: wrap;
         flex-direction: column;
-        height: 100vh;
+        height: 100lvh;
         transition: transform 0.2s ease;
         transform: translateX(-100vw);
         transition-duration: 0.3s;
@@ -669,7 +674,7 @@
     #navbarButton {
         font-family: 'easvhs';
         width: 15%;
-        height: 100vh;
+        height: 100lvh;
         background-color: rgb(177, 0, 0);
     }
     
@@ -711,7 +716,7 @@
     #posts {
         overflow-y: scroll;
         overflow-x: hidden;
-        height: 80vh;
+        height: 70lvh;
         /* width: 90vw; */
     }
     
