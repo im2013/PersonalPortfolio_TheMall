@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    
+    <!-- v-if="isVisibleNavBar" -->
+    <button id="navbarButton" @click="toggleNavBar">SHOW NAVBAR</button>
+    <div id="navigationBar" :class="{ 'visible': isVisibleNavBar }">
+
+        <h1>Contents</h1>
+        <div id="navBarContactDetails">
+            <h2>Contact</h2>
+            <ol>PEN: Amber Tamark</ol>
+            <ol>Iona Moynihan</ol>
+            <ol>GitHub: <a href="https://github.com/amber-wolf0">https://github.com/amber-wolf0</a></ol>
+            <ol>LinkedIn: <a href="https://www.linkedin.com/in/iona-moynihan-11ba15263/">https://www.linkedin.com/in/iona-moynihan-11ba15263/</a></ol>
+            <ol>Contact Email: awsocants2023@gmail.com</ol>
+        </div>
+        <h2><a href="/index.html">Homepage</a></h2>
+        <h2><a href="/conceptart.html">Concept Art</a></h2>
+        <h2><a href="/project.html">About This Project</a></h2>
+        <h2><a href="/aboutme.html">About Me</a></h2>
+        <h2><a href="/demo.html">Demo?</a></h2>
+        <h2><a href="/bugreporting.html">Report a Bug!</a></h2>
+    </div>
+
+        <div id="content" :class="{ 'shifted': isVisibleNavBar }">
+            <div id="contentHeader">The Mall Devlog</div>
+            <div id="insidePost">
+                    <h2>Beginning of Animations</h2>
+                    <h3>18-07-2024</h3>
+                    <p>A lengthy post of alot of progress. Later in the post, I import the player character and use a shader to layer 2d clothing textures to achieve a flat effect.</p>
+
+                    <h4>21-06</h4>
+                    <p>On this day, I implemented the player's ability to pick up and drop objects, here are following clips of 
+                        the mechanisms I implemented.
+                    </p>
+                    <video width="50%" height="50%" controls>
+                        <source src="\images\18-07-2024\2024-06-21 15-33-19.mp4" type="video/mp4">
+                    </video>
+                    <p>^ Beginnings of picking up, using a visible target that the object moves to.</p>
+                    <video width="50%" height="50%" controls>
+                        <source src="\images\18-07-2024\2024-06-21 19-10-47.mp4" type="video/mp4">
+                    </video>
+                    <p>^ Now have added the ability to pick up backpacks and equip them, you can still pick them up like any 
+                        other object, you equip and unequip backpacks using F. There is a time delay picking and placing them- this is 
+                        to increase difficulty- I plan to increase this time delay in numerous difficulty settings for my game- for example, 
+                        a longer time is needed to take off and put on a backpack if higher difficulty.
+                    </p>
+                    <br>
+                    <p>Afterwards, I decided to create a potential nemesis featured in the scarier part of the game, during the ritual, 
+                        Satan himself.
+                    </p>
+                    <img src="\images\18-07-2024\Screenshot 2024-06-21 204501.png" style="max-width:40%;" alt="satan1">
+                    <img src="\images\18-07-2024\Screenshot 2024-06-21 202501.png" style="max-width:30%;" alt="satan1">
+                    <img src="\images\18-07-2024\image.png" style="max-width:50%;" alt="satan1">
+
+                    <h4>24-06</h4>
+                    <p>I 3d modelled, textured, and animated a mouse model and a cat model.</p>
+                    <video width="25%" height="25%" controls>
+                        <source src="\images\18-07-2024\2024-06-24 19-44-03.mp4" type="video/mp4">
+                    </video>
+                    <video width="25%" height="25%" controls>
+                        <source src="\images\18-07-2024\2024-06-24 19-44-12.mp4" type="video/mp4">
+                    </video>
+                    <video width="25%" height="25%" controls>
+                        <source src="\images\18-07-2024\2024-06-24 19-44-26.mp4" type="video/mp4">
+                    </video>
+                    <video width="25%" height="25%" controls>
+                        <source src="\images\18-07-2024\2024-06-24 19-44-35.mp4" type="video/mp4">
+                    </video>
+                    <video width="25%" height="25%" controls>
+                        <source src="\images\18-07-2024\2024-06-24 19-44-46.mp4" type="video/mp4">
+                    </video>
+                    <video width="25%" height="25%" controls>
+                        <source src="\images\18-07-2024\2024-06-24 19-44-58.mp4" type="video/mp4">
+                    </video>
+                    <video width="25%" height="25%" controls>
+                        <source src="\images\18-07-2024\2024-06-24 19-45-09.mp4" type="video/mp4">
+                    </video>
+                    <p>Here are graphs of the animations I made for the respective models:</p>
+                    <p>Mouse Animations</p>
+                    <img src="\images\18-07-2024\Screenshot 2024-06-24 194215 mouse animations.png" style="max-width:40%;" alt="mouseAnimations">
+                    <p>Cat Animations</p>
+                    <img src="\images\18-07-2024\Screenshot 2024-06-24 174850.png" style="max-width:40%;" alt="catAnimations">
+                    <img src="\images\18-07-2024\Screenshot 2024-06-26 022837.png" style="max-width:40%;" alt="catLyingOnBack">
+                    <p>Here are some (not all) texture variants of mice.</p>
+                    <img src="\images\18-07-2024\Screenshot 2024-06-24 202405.png" style="max-width:20%;" alt="hamsterVariantTexture">
+                    <img src="\images\18-07-2024\Screenshot 2024-06-24 202422.png" style="max-width:20%;" alt="hamsterVariantTexture">
+                    <img src="\images\18-07-2024\Screenshot 2024-06-24 202436.png" style="max-width:22%;" alt="hamsterVariantTexture">
+                    <img src="\images\18-07-2024\Screenshot 2024-06-24 202506.png" style="max-width:20%;" alt="hamsterVariantTexture">
+                    <img src="\images\18-07-2024\Screenshot 2024-06-24 202610.png" style="max-width:20%;" alt="hamsterVariantTexture">
+                    <img src="\images\18-07-2024\Screenshot 2024-06-24 202644.png" style="max-width:20%;" alt="hamsterVariantTexture">
+
+                    <h4>02/03-07</h4>
+                    <p>These two days, I 3d modelled a Shadow Person and the Hatman. I want these entities to show up when the player 
+                        is very fatigued and anxious in scarier stages of the game. I'm unsure which shadow person variant to include as of yet, 
+                        as the faded one is very on theme with the Hatman.
+                    </p>
+                    <img src="\images\18-07-2024\Screenshot 2024-07-03 194052.png" style="max-width:40%;" alt="hatman">
+                    <img src="\images\18-07-2024\Screenshot 2024-07-03 195141.png" style="max-width:40%;" alt="shadowperson1">
+                    <img src="\images\18-07-2024\Screenshot 2024-07-03 195203.png" style="max-width:40%;" alt="shadowperson2">
+
+                    <p>Afterwards, I finally imported the player model I have been working on since 2023.</p>
+                    <video width="50%" height="50%" controls>
+                        <source src="\images\18-07-2024\2024-07-02 01-14-32.mp4" type="video/mp4">
+                    </video>
+
+                    <p>To conclude this post, I added animations using Unity's scrollwheel while moving to increase or decrease speed. 
+                        This mechanic cycles through walking -> jogging -> running -> sprinting depending on how far the player has 
+                    scrolled upwards or downwards using their scrollwheel. Animations are managed by Unity's Animator and Animator Controller, 
+                    which made the process MUCH easier than I had imagined, as I had been putting off importing the player for a long time due to 
+                    the fear that animation and texturing was going to be very difficult.
+                
+                </p>
+                    <video width="50%" height="50%" controls>
+                        <source src="\images\18-07-2024\2024-07-16 00-59-15.mp4" type="video/mp4">
+                    </video>
+                    <p>FIN.</p>
+
+                    <h4>Sources and Tutorials</h4>
+                    <li><a href="https://docs.unity3d.com/ScriptReference/Animator.html">Unity Animator (Scripting API)</a></li>
+                    <li><a href="https://docs.unity3d.com/Manual/class-AnimatorController.html">Unity Animator Controller (Scripting API)</a></li>
+
+                </div>
+        </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+        }
+    });
+</script>
+
+</html>
