@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    
+    <!-- v-if="isVisibleNavBar" -->
+    <button id="navbarButton" @click="toggleNavBar">SHOW NAVBAR</button>
+    <div id="navigationBar" :class="{ 'visible': isVisibleNavBar }">
+
+        <h1>Contents</h1>
+        <div id="navBarContactDetails">
+            <h2>Contact</h2>
+            <ol>PEN: Amber Tamark</ol>
+            <ol>Iona Moynihan</ol>
+            <ol>GitHub: <a href="https://github.com/amber-wolf0">https://github.com/amber-wolf0</a></ol>
+            <ol>LinkedIn: <a href="https://www.linkedin.com/in/iona-moynihan-11ba15263/">https://www.linkedin.com/in/iona-moynihan-11ba15263/</a></ol>
+            <ol>Contact Email: awsocants2023@gmail.com</ol>
+        </div>
+        <h2><a href="/index.html">Homepage</a></h2>
+        <h2><a href="/conceptart.html">Concept Art</a></h2>
+        <h2><a href="/project.html">About This Project</a></h2>
+        <h2><a href="/aboutme.html">About Me</a></h2>
+        <h2><a href="/demo.html">Demo?</a></h2>
+        <h2><a href="/bugreporting.html">Report a Bug!</a></h2>
+    </div>
+
+        <div id="content" :class="{ 'shifted': isVisibleNavBar }">
+            <div id="contentHeader">The Mall Devlog</div>
+            <div id="insidePost">
+                    <h2>3d Modelling some clothes and a wolf</h2>
+                    <h3>22-12-2023</h3>
+                    <p>On this day I decided to primarily focus on 3d modelling and texturing.<br>
+                        I made a wolf with some variant textures, and I made some new clothes for the base human model.</p>
+                        <iframe src="https://drive.google.com/file/d/15jZA5Bc-lUwc7M9EtgrnvvHgAMeFIIyG/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/10oG342PVKD5MJSlBT0cniYnIqDt8zUeD/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/15QK5-nySgZAIFC5x8qAxhphRG8P8r7bB/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/13KRVju9WZh-GujFVYkDzBDpEiiOWGyaq/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1wBHha-RNmJ684G7w3pMulJvA7PT1O0-J/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <p>The wolf model in question:</p>
+                        <iframe src="https://drive.google.com/file/d/1FyUIBVtBnn9-bBxyyMf9HGGuXYaQSJ0x/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <p>I also gave it some early animations:</p>
+                        <iframe src="https://drive.google.com/file/d/1mtHMYJ-oj6chCZE9GjVHHgO8yPm2cSiI/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <p>Some reskins and animations:</p>
+                        <iframe src="https://drive.google.com/file/d/1srpkFAa7AZ-VC2r4y6OQLBYQRA0-n2ae/preview" width="640" height="480" allow="autoplay"></iframe>
+                        <iframe src="https://drive.google.com/file/d/1fqNzGwyv4kOoBpM3VdA69aqNTaC6AAJr/preview" width="640" height="480" allow="autoplay"></iframe>
+                </div>
+            </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+        }
+    });
+</script>
+
+</html>

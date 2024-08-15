@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    
+    <!-- v-if="isVisibleNavBar" -->
+    <button id="navbarButton" @click="toggleNavBar">SHOW NAVBAR</button>
+    <div id="navigationBar" :class="{ 'visible': isVisibleNavBar }">
+
+        <h1>Contents</h1>
+        <div id="navBarContactDetails">
+            <h2>Contact</h2>
+            <ol>PEN: Amber Tamark</ol>
+            <ol>Iona Moynihan</ol>
+            <ol>GitHub: <a href="https://github.com/amber-wolf0">https://github.com/amber-wolf0</a></ol>
+            <ol>LinkedIn: <a href="https://www.linkedin.com/in/iona-moynihan-11ba15263/">https://www.linkedin.com/in/iona-moynihan-11ba15263/</a></ol>
+            <ol>Contact Email: awsocants2023@gmail.com</ol>
+        </div>
+        <h2><a href="/index.html">Homepage</a></h2>
+        <h2><a href="/conceptart.html">Concept Art</a></h2>
+        <h2><a href="/project.html">About This Project</a></h2>
+        <h2><a href="/aboutme.html">About Me</a></h2>
+        <h2><a href="/demo.html">Demo?</a></h2>
+        <h2><a href="/bugreporting.html">Report a Bug!</a></h2>
+    </div>
+
+        <div id="content" :class="{ 'shifted': isVisibleNavBar }">
+            <div id="contentHeader">The Mall Devlog</div>
+            <div id="insidePost">
+                    <h2>Early Phone Developments!</h2>
+                    <h3>14-08-2024</h3>
+
+                    <p>Unfortunately, due to ill health, I've not been able to do any developments for a little under a month. Thankfully, I've healed and I'm now up and  
+                        programming again!
+                    </p>
+
+                    <h4>18-07</h4>
+                    <iframe src="https://drive.google.com/file/d/18YbT1-ylx4icbfuohauX8rAjGKDughes/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>^ Player can open phone, look at phone and put away phone.</p>
+
+                    <iframe src="https://drive.google.com/file/d/1njN1wtDeP9ZvWxOkcBtXmNgpuQlH6mnu/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>^ Phone now has a battery which decreases over time.</p>
+
+                    <h4>19-07</h4>
+                    <p>I 3d modelled some frogs before I became too ill to code again.</p>
+                    <iframe src="https://drive.google.com/file/d/1ZynHpay8fYd0Pv_t7DG0P_jXR-3dvd7N/preview" width="340" height="280" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1Q9gk3JvaMsC8p2NQmWnPk9iq4XufYi9J/preview" width="340" height="280" allow="autoplay"></iframe>
+
+                    <h4>6-08 onwards</h4>
+                    <iframe src="https://drive.google.com/file/d/11gXqcz2GHcKT9HJxHIs4SOd3r6opFvPT/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>After recovery, I decided to tackle the development of the phone. A very important aspect of gameplay used to expand the amount of interactions the player 
+                        can have with their environment other than running, jumping and in future, hiding.</p>
+                    <p>The player will have access to 8 apps: </p>
+                    <ul>
+                        <li><h4>Camera App</h4> <p>Player can take photos of objects- where the subject of the object is stored and used for other apps.</p></li>
+                        <li><h4>Settings App</h4> <p>Instead of a very unimmersive, and overused ESC menu- I decided I want the player to access settings through their phone instead.</p></li>
+                        <li><h4>Notes App</h4> <p>Player can write notes here.</p></li>
+                        <li><h4>Message App</h4> <p>Player can communicate to other friends apart of their Contacts. Used in game later during the Hide-And-Seek section.</p></li>
+                        <li><h4>Photos App</h4> <p>Player can see recently taken photos here, and send them to other friends.</p></li>
+                        <li><h4>Contacts App</h4> <p>Friends made will give you their contact, which will allow you to message them and send photos.</p></li>
+                        <li><h4>Map App</h4> <p>Used as a map for the game, which is very useful as the mall can seem maze-like sometimes.</p></li>
+                        <li><h4>Doom App</h4> <p>A joke suggested to me- I plan to have text appear saying "DOOM" and you scroll downwards- "DOOM SCROLLING".</p></li>
+                    </ul>
+                    <p>Here is the most current picture of all the apps in the player's homescreen:</p>
+                    <iframe src="https://drive.google.com/file/d/14ITD3RZXIWqlyh6BgFnIVtc-SG7KC0jh/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <br>
+
+                    <iframe src="https://drive.google.com/file/d/12AmwgnUdTDBVRLbNDBA-Gb4YyIEqWuYC/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>^ Early implementation of phone charging, I make the phone object go from a empty parent transform attached to the player's hand to another empty 
+                        transform at the "charger" object.</p>
+
+                    <iframe src="https://drive.google.com/file/d/1bf18rSPMdC5ZqSgqARHQIr-8hsun-WIb/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>^ Developed the UI of the homescreen, and implemented phone charging.</p>
+
+                    <iframe src="https://drive.google.com/file/d/1zLTpmN1XyPcxzLDzhORZVDx1p5cj8lRl/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>^ I then added a homescreen to appear if you 'focus' on the phone, I think it is important to have a good view of all applications upclose for ease of use.</p>
+
+                    <iframe src="https://drive.google.com/file/d/1S_d01Ooy20Ij74QvVub8LQpbBLeBeyfY/preview" width="340" height="280" allow="autoplay"></iframe>
+                    <p>^ Early photoshop development of battery UI.</p>
+
+                    <iframe src="https://drive.google.com/file/d/1BHr-L1IVa8VR7uY-3XS54uEWlxqi1VVK/preview" width="340" height="280" allow="autoplay"></iframe>
+                    <p>^ I then developed the phone running out of battery screen using the new UI I created.</p>
+
+                    <iframe src="https://drive.google.com/file/d/1OwBEPWrt5N6ZPtAb3SBRwQDfuQxBpexG/preview" width="340" height="280" allow="autoplay"></iframe>
+                    <p>^ Early prototypes of the phone app icons.</p>
+
+                    <iframe src="https://drive.google.com/file/d/1g5DEZ2XaIV8oCsU2PY7tXu9adSLPzK7E/preview" width="340" height="280" allow="autoplay"></iframe>
+                    <p>^ With some suggestions by friends, I altered the app icons to be more consistent more visually appealing.</p>
+
+                    <iframe src="https://drive.google.com/file/d/1pb6DaleyGcSCC6b8QLFEJertIwdgscm7/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>^ I placed the apps onto the homescreen and developed an early interface for the settings app.</p>
+
+                    <iframe src="https://drive.google.com/file/d/1-1F--vNsuOfgtE4fzO8nkPddNuEMdYkg/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>^ Finally, I have begun experimenting with the camera app, this will be a very tedious feature to implement and research for.</p>
+
+                    <p>Future tasks: Involve the implementation of the camera app and it's features.</p>
+                    <iframe src="https://drive.google.com/file/d/1F_5gequWKNSxo6RJpEdTBzAusX7IrnAD/preview" width="640" height="480" allow="autoplay"></iframe>
+
+                    <h4>Resources/Tools</h4>
+                    <ul>
+                        <li><a href="https://stackoverflow.com/questions/56783654/how-to-capture-frames-from-the-unity3d-camera-and-display-them-on-another-rawima">
+                            StackOverflow I followed to help program the camera app feature</a>
+                        </li>
+                        <li><a href="https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-RawImage.html">
+                            Unity raw image manual</a>
+                        </li>
+                        <li><a href="https://docs.unity3d.com/2018.2/Documentation/ScriptReference/UI.RawImage.html">
+                            Unity Documentation on raw images</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    
+    <!-- v-if="isVisibleNavBar" -->
+    <button id="navbarButton" @click="toggleNavBar">SHOW NAVBAR</button>
+    <div id="navigationBar" :class="{ 'visible': isVisibleNavBar }">
+
+        <h1>Contents</h1>
+        <div id="navBarContactDetails">
+            <h2>Contact</h2>
+            <ol>PEN: Amber Tamark</ol>
+            <ol>Iona Moynihan</ol>
+            <ol>GitHub: <a href="https://github.com/amber-wolf0">https://github.com/amber-wolf0</a></ol>
+            <ol>LinkedIn: <a href="https://www.linkedin.com/in/iona-moynihan-11ba15263/">https://www.linkedin.com/in/iona-moynihan-11ba15263/</a></ol>
+            <ol>Contact Email: awsocants2023@gmail.com</ol>
+        </div>
+        <h2><a href="/index.html">Homepage</a></h2>
+        <h2><a href="/conceptart.html">Concept Art</a></h2>
+        <h2><a href="/project.html">About This Project</a></h2>
+        <h2><a href="/aboutme.html">About Me</a></h2>
+        <h2><a href="/demo.html">Demo?</a></h2>
+        <h2><a href="/bugreporting.html">Report a Bug!</a></h2>
+    </div>
+
+        <div id="content" :class="{ 'shifted': isVisibleNavBar }">
+            <div id="contentHeader">The Mall Devlog</div>
+            <div id="insidePost">
+                    <h2>Window/Glossy Shader</h2>
+                    <h3>23-05-2024</h3>
+                    <p>I spent an unfortunate amount of time (~5hrs) on creating a shader for my windows following this excellent tutorial by Cyanilux:
+                        <a href="https://www.cyanilux.com/tutorials/toon-glass-shader-breakdown/">'Toon Glass Shader Breakdown'.</a>
+                        However, I feel the effects have been well worth it, as it follows the user's camera realistically, and the pattern made matches the aesthetic of my project.
+                    </p>
+                    <iframe src="https://drive.google.com/file/d/1JgcJu0lBsnlF1SpJIKjxVoQi495LaYVV/preview" width="640" height="480" allow="autoplay"></iframe>
+
+                    <p>I'm now considering the crosswalk at the front- how should I decorate it?</p>
+                    <iframe src="https://drive.google.com/file/d/1E0sVziOfpf4D6s1AZUSTxvC2L9vY_eXA/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/14Zue7OwI2SBEz95BzkJOGav2oQd6cIZv/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1JanqnLnoycbyZOkVmYoI0D_h7OGKCvHW/preview" width="640" height="480" allow="autoplay"></iframe>
+
+                    <p>I have also now began decorating "Eggscelent", a sandwich and breakfast bar.</p>
+                    <iframe src="https://drive.google.com/file/d/1lFehyvsK53ynCxatwPFBT2mwIFOnwS3p/preview" width="640" height="480" allow="autoplay"></iframe>
+
+                    <p>Before all of the above: The Sky box has now been restored to it's former glory!</p>
+                    <iframe src="https://drive.google.com/file/d/1ZiJ8-xgK5ffI0hspoPhXHSx5v9A8-lR1/preview" width="640" height="480" allow="autoplay"></iframe>
+            </div>
+        </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+        }
+    });
+</script>
+
+</html>
