@@ -67,7 +67,7 @@ a {
     font-family: 'niceSugar';
     height: 100vh;
     width: 95vw;
-    transform: translateX(5%);
+    transform: translateX(10%);
     margin: 0;
     padding: 0;
     /*hide scroll bar*/

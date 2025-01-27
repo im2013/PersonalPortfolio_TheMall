@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/theMall.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h2>Blocking out the Layout</h2>
+                    <h3>02-01-2024</h3>
+                    <p>Early blocking out:</p>
+                    <iframe src="https://drive.google.com/file/d/1GPMgpKIRzuJZu-1gzSluSFsMOmWFUbzW/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1AmchSOTJsG-LmAJyEStNgVabBvj7YIqK/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1ZRreH0MlxocYnUnXk9Kdt_UDa837H5FS/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1kte6ao9_2oE9RorCtNKLFsATwNq20yn2/preview" width="640" height="480" allow="autoplay"></iframe>
+    
+                    <p>Final recent blockout:</p>
+                    <iframe src="https://drive.google.com/file/d/1K1aaqS6Sjm-DB1e-Z-RhC13Mvg1VFd_q/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1GvD2EK2DqGwCrmqowWuMn8ee6tTRUvny/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,152 @@
+#container {
+    display: flex;
+}
+
+body {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.2s ease;
+    overflow: hidden;
+    background-color: rgb(143, 217, 143);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*NAVIGATION*/
+#navigationBar {
+    font-family: 'niceSugar';
+    width: 20%;
+    background-color: #ff4974;
+    margin-right: 5px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100vh;
+    transition: transform 0.2s ease;
+    transform: translateX(-100vw);
+    transition-duration: 0.3s;
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+#navigationBar.visible {
+    transform: translateX(0);
+    overflow: hidden;
+}
+
+#navbarButton {
+    font-family: 'niceSugar';
+    width: 5%;
+    height: 100vh;
+    background-color: #ff4974;
+}
+
+#navbarButton:hover {
+    background-color: #ff2a5c;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #e5ffc7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #38cc42;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle when scrolling */
+::-webkit-scrollbar-thumb:active {
+    background-color: #000;
+}
+
+#links a {
+    margin-right: 100px;
+}
+
+@font-face { 
+    font-family: 'niceSugar';
+    src: url(NiceSugar.ttf) format('truetype');
+    /*Nice Sugar font by Khurasan, https://www.dafont.com/nice-sugar.font*/
+}
+
+/*the mall styling*/
+#theMall_sideBar {
+    position:absolute;
+    flex: 1;
+    transition: transform 0.3s ease;
+    transition-duration: 0.4s;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    font-family: 'niceSugar';
+    height: 100vh;
+    width: 20vw;
+    transform: translateX(30%);
+}
+
+#theMall_sideBar.shifted {
+    transform: translateX(135%);
+    width: 20vw;
+}
+
+#theMall_postBox {
+    background-color: rgba(117, 164, 79, 0.492);
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    width: 17vw;
+}
+#theMall_postBox > a {
+    font-size: 45%;
+    color: black;
+}
+#theMall_postBox > a:visited {
+    font-size: 45%;
+    color: rgb(76, 255, 40);
+}
+#theMall_postBox:hover {
+    background-color: rgba(142, 255, 117, 0.68);
+}
+#theMall_postBox:active {
+    background-color: rgb(164, 255, 128);
+}
+
+#theMall_content {
+    background-color: rgba(89, 128, 68, 0.68);
+    transform: translateX(0.25%);
+    width: 69vw;
+    height: 90vh;
+    font-family: 'niceSugar';
+    padding: 2.5%;
+
+    flex: 1;
+    transition: transform 0.3s ease;
+    transition-duration: 0.4s;
+    overflow-y: scroll;
+
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    flex-grow: 1;
+    margin-left: -0.2%;
+}
+
+#theMall_content.shifted {
+    transform: translateX(30%);
+    width: 49vw;
+}

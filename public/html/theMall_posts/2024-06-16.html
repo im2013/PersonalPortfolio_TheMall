@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/theMall.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h2>Prop Importation and Organisation</h2>
+                    <h3>16-06-2024</h3>
+                    <p>Spent hours organising and re-sizing models as I had to convert from Blender files to .fbx files, and import into Unity.</p>
+                    <p>At first, I created new numerous ice cream textures for a few hours, as I enjoy variety- this insigificant feature may be appreciated by few, 
+                        but variety is the spice of life and ensures the player won't see repetitive objects over-and-over again.
+                    </p>
+                    <iframe src="https://drive.google.com/file/d/1WJUSagkSKiXJbbp8HPXKmGhjhUMWu6zg/preview" width="640" height="480" allow="autoplay"></iframe>
+
+                    <p>After creating the icecream flavours and animations, (open lid, close lid, etc.) I began to import numerous models to Unity.
+                        I have not yet uploaded ALL of my completed models, and many, many models remain uncompleted as of now.
+                    </p>
+
+                    <iframe src="https://drive.google.com/file/d/17ai2STMuTHidTLoml78ZKbMn6lxqB-6A/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1YkCnHm8E6bk1MwID0ieRaebaLvw_23Zn/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1S6MGR-lRIDIIcsOWfB5RijfM_czJ-c2c/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+        }
+    });
+</script>
+
+</html>

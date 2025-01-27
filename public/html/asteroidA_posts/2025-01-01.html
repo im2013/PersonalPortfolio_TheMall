@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/asteroidAvoid.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h2>Setting up the Scene</h2>
+        <h3>01-01-2025</h3>
+        <p>Using rigid body mechanics and collusion, I made invisible barriers at first to stop the player from going too far left or right.</p>
+        <iframe src="https://drive.google.com/file/d/1kw2WU_B5CORJGwJ5QFpU7Ik5bB10ULbx/preview" width="640" height="480" allow="autoplay"></iframe>
+        <p>I then started adding stars (as particle systems), planets (spheres) and a world skybox.</p>
+        <iframe src="https://drive.google.com/file/d/11Akqrjs3QMoSG8365V1jzUmGXtN_fylX/preview" width="640" height="480" allow="autoplay"></iframe>
+        <p>Finally, some early addition of targets where asteroids are to spawn from.</p>
+        <iframe src="https://drive.google.com/file/d/12HRSjVR6YcvtR1kqRFAgjRvtazS3r9D5/preview" width="640" height="480" allow="autoplay"></iframe>
+        
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+            currentPost: '/theMall_posts/2024-08-28.html', // Default post
+            posts: [
+                { title: 'Major Asset Creation', date: '28-08-2024', url: '/theMall_posts/2024-08-28.html' },
+            ]
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+            changePost(newUrl) {
+            this.currentPost = newUrl;
+            }
+        }
+    });
+
+
+</script>
+
+</html>

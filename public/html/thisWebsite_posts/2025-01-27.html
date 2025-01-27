@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/thisWeb.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h1>Another Rework...</h1>
+        <h2>27-01-2025</h2>
+        <p>Decided to do another rework so that all my projects are included within one website.</p>
+        <br>
+        <p>11-01-2025</p>
+        <iframe src="https://drive.google.com/file/d/1UXhGRoNItr9qxZUhpDPLQ-RpCVIugXjD/preview" width="640" height="480" allow="autoplay"></iframe>
+        <p>12-01-2025</p>
+        <iframe src="https://drive.google.com/file/d/1UjqeuvZ-7GLw94omDbGrL5FDMuORHMlT/preview" width="640" height="480" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/1U8-ayX860GMWqGch3Ul4Gsf-xIZJuplS/preview" width="640" height="480" allow="autoplay"></iframe>
+        <p>27-01-2025</p>
+        <iframe src="https://drive.google.com/file/d/1V-QRZTyAWme2rOYUnXotCQjGYfqtFllV/preview" width="640" height="480" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/1V5GOi5CsyiOIVO4dZoofWq0iSZyjtVrM/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+            currentPost: '/theMall_posts/2024-08-28.html', // Default post
+            posts: [
+                { title: 'Major Asset Creation', date: '17-06-2024', url: '/thisWebsite_posts/2024-06-17.html' },
+            ]
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+            changePost(newUrl) {
+            this.currentPost = newUrl;
+            }
+        }
+    });
+
+
+</script>
+
+</html>
