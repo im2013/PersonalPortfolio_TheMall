@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/aboutMe.css">
+    <link rel="stylesheet" href="/css/plantSim.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <title>The Mall DevBlog</title>
+    <title>Plant Simulator</title>
 </head>
+<body>
 <div id="container">
     <!-- v-if="isVisibleNavBar" -->
     <button id="navbarButton" @click="toggleNavBar">SHOW NAVBAR</button>
@@ -33,45 +34,40 @@
             <ol>ionamoynihan003@gmail.com</ol>
         </div>
     </div>
-    <body>
-        <div id="content" :class="{ 'shifted': isVisibleNavBar }">
-            <div id="contentHeader">The Mall Devlog</div>
-            <h1>About Me</h1>
-            <div id="links">
-                <a href="https://github.com/amber-wolf0">GitHub</a>
-                <a href="https://www.linkedin.com/in/iona-moynihan-11ba15263/">LinkedIn</a>
-                Discord: @amber___wolf
-            </div>
-            <br>
-            <p>I'm a to-be Software Engineer currently studying at HWU, I am an artist and game developer in my spare time.</p>
-            <br>
-            <h2>Education</h2>
-            <h3>MEng Software Engineering - Heriot-Watt Univeristy - Ongoing</h3>
-            <p>I have been studying MEng Software Engineering since 2021, so far I've studied in my modules:</p>
-                <ul>Data Structures (e.g. Red-Black Trees, Queues)</ul>
-                <ul>Sorting Algorithms (e.g. FIFO, LIFO)</ul>
-                <ul>Artificial Intelligence</ul>
-                <ul>Concurrency (e.g. Threading, Monitors)</ul>
-                <ul>Various Programming Languages (e.g. Java, C, Python)</ul>
 
-            <h3>Other Education</h3>
-            <p>I am self-taught in many languages, IDE, and other tools, such as the following:</p>
-            <h4>Tools and Experience</h4>
-                <ul>Blender 3d (since 2015)</ul>
-                <ul>Unity 3d (since 2019)</ul>
-                <ul>Visual Studio Code (since 2018)</ul>
-                <ul>Adobe Photoshop (since 2020)</ul>
-                <ul>PaintTool SAI (2013-2020)</ul>
-                <ul>Visual Studio (2019-2021)</ul>
+    <div id="theMall_sideBar" :class="{ 'shifted': isVisibleNavBar }">
+        <!--posts here-->
+        <div id="theMall_postBox" v-for="(post, index) in posts" :key="index">
+            <a href="#" @click.prevent="changePost(post.url)">
+                <h1>{{ post.title }}</h1>
+                <h2>{{ post.date }}</h2>
+            </a>
         </div>
-    </body>
+    </div>
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h1>Plant Simulator Devlog</h1>
+        <p>A plant simulator I plan to use for numerous more personal projects in future. I wanted an application that could emulate plant life, including 
+            germination and other plant stages, day/night growth and growing habits. This project aims to have 3D plants with several 'parts' such as leaves, flowers, etc. 
+            and a proper simulation of a map including weather, temperature changes, seasons (with a map simulating the different types of seasons around the world), altitude, 
+            soil types.
+        </p>
+        <br>
+        <div id="content">
+            <iframe :src="currentPost" width="100%" height="600px" style="border: none;"></iframe>
+        </div>
+    </div>
 </div>
-
+</body>
 <script>
     new Vue ({
         el: '#container',
         data: {
             isVisibleNavBar: false,
+            currentPost: '/plantSim_posts/2024-12-21.html', // Default post
+            posts: [
+                { title: 'Moving into Unity Engine', date: '21-12-2024', url: '/plantSim_posts/2024-12-21.html' },
+                { title: 'C# Mockup', date: '20-12-2024', url: '/plantSim_posts/2024-12-10.html'},
+            ]
         },
         onmount() {
         },
@@ -79,8 +75,13 @@
             toggleNavBar() {
                 this.isVisibleNavBar = !this.isVisibleNavBar;
             },
+            changePost(newUrl) {
+            this.currentPost = newUrl;
+            }
         }
     });
+
+
 </script>
 
 </html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/plantSim.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Plant Simulator</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h2>C# Mockup</h2>
+        <h3>10-12-2024</h3>
+        <p>Created the plant simulator first using C# within Visual Studio. 
+            This allowed me to have much more control of the script, rather than first using Unity Engine.
+            If I had first used Unity, I think I would have gotten overwhelmed by the aspect of thinking about visuals when I wasn't ready.
+        </p>
+
+        <p>
+            I first decided to create all the variables (max plant height, preferred soil, etc.) and simulated the plant's growth agewise and the plant's growth stages as
+             an adult plant. After this, I created map points to simulate planted plants within a console.
+        </p>
+
+        <p>Here is a early screenshot of a "plot of land" with a planted plant.</p>
+        <iframe src="https://drive.google.com/file/d/1T7_zpQn9OPyuteM-pVpl2ItVKkj1f1h8/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+            currentPost: '/theMall_posts/2024-08-28.html', // Default post
+            posts: [
+                { title: 'Post Title', date: '28-08-2024', url: '/theMall_posts/2024-08-28.html' },
+            ]
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+            changePost(newUrl) {
+            this.currentPost = newUrl;
+            }
+        }
+    });
+
+
+</script>
+
+</html>

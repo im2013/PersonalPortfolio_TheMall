@@ -46,7 +46,27 @@ app.get('/css', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'css', 'index.css'));
 });
 
-app.use('/posts', express.static(path.join(__dirname, 'public', 'html', 'posts')));
+app.get('/plantSimulator_index.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'plantSimulator_index.html'));
+});
+
+app.get('/theMall_index.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'theMall_index.html'));
+});
+
+app.get('/thisWebsite_index.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'thisWebsite_index.html'));
+});
+
+app.get('/asteroidAvoid_index.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'asteroidAvoid_index.html'));
+});
+
+app.use('/theMall_posts', express.static(path.join(__dirname, 'public', 'html', 'theMall_posts')));
+app.use('/plantSim_posts', express.static(path.join(__dirname, 'public', 'html', 'plantSim_posts')));
+app.use('/asteroidA_posts', express.static(path.join(__dirname, 'public', 'html', 'asteroidA_posts')));
+app.use('/thisWebsite_posts', express.static(path.join(__dirname, 'public', 'html', 'thisWebsite_posts')));
+
 app.use('/images', express.static(path.join(__dirname, 'public', 'images')));
 app.use('/html', express.static(path.join(__dirname, 'public', 'html')));
 app.use('/css', express.static(path.join(__dirname, 'public', 'css')));

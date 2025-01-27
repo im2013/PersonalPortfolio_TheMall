@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/asteroidAvoid.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h2>Adding Gamemode 3</h2>
+        <h3>05-01-2025</h3>
+        <p>Finally added a very early version of game mode 3 for this project.</p>
+        <iframe src="https://drive.google.com/file/d/1O82w0J6KI04-llIdEhsdVsqkyV_Ekzz6/preview" width="640" height="480" allow="autoplay"></iframe>
+        <iframe src="https://drive.google.com/file/d/1CN6DXizgZo1TEc8pSqzPEBnYMoPqJMPK/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+            currentPost: '/theMall_posts/2024-08-28.html', // Default post
+            posts: [
+                { title: 'Major Asset Creation', date: '28-08-2024', url: '/theMall_posts/2024-08-28.html' },
+            ]
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+            changePost(newUrl) {
+            this.currentPost = newUrl;
+            }
+        }
+    });
+
+
+</script>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/theMall.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h2>ACCIDENTAL DELETION</h2>
+                    <h3>20-02-2024</h3>
+                    <p>I had accidentally deleted my entire project I had made so far in Unity as I was trying to upload it to my GitHub.
+                        <br>However, I am now rebuilding my project from the grounds up, in hopes that from what I've learned from my first iteration,
+                        can be used as new knowledge to produce an even better, new product and game.
+                    </p>
+                    <br>
+                    <p>I spent the entire day re-blocking out a newer map. [images from newest to oldest]</p>
+                    <iframe src="https://drive.google.com/file/d/1SOBepTdaABN67Kvy1zszzlmCuZ5puXlj/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/16x2auwXFgP1LavF_hAQUddREl-Z3JE9i/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1b5SoDqH26a4Fh9kHeEPZ9gnsaYkRL3uN/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1-XUdCHLVd4euDTIgOUm6qfRxxJHgajqa/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>^ Early placement of main hallway.</p>
+                    <iframe src="https://drive.google.com/file/d/161aNXQLkJaNGYllt5-fFb-0yq1BcMyK-/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>^ Concept mall hallway in Blender.</p>
+                    <iframe src="https://drive.google.com/file/d/1tmQNnloaVPm9f2_F93D3LbqlEr-ZhI7U/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+        }
+    });
+</script>
+
+</html>

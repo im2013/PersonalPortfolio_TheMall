@@ -5,307 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <title>The Mall DevBlog</title>
+    <title>Web Portfolio ~ Iona Moynihan</title>
 </head>
 <body>
 <div id="container">
     <!-- v-if="isVisibleNavBar" -->
     <button id="navbarButton" @click="toggleNavBar">SHOW NAVBAR</button>
+
     <div id="navigationBar" :class="{ 'visible': isVisibleNavBar }">
-
-        <h1>Contents</h1>
+        <br>
         <div id="navBarContactDetails">
-            <h2>Contact</h2>
-            <ol>PEN: Amber Tamark</ol>
-            <ol>Iona Moynihan</ol>
-            <ol>GitHub: <a href="https://github.com/amber-wolf0">https://github.com/amber-wolf0</a></ol>
-            <ol>LinkedIn: <a href="https://www.linkedin.com/in/iona-moynihan-11ba15263/">https://www.linkedin.com/in/iona-moynihan-11ba15263/</a></ol>
-            <ol>Contact Email: awsocants2023@gmail.com</ol>
+            <h2 style="font-size: 200%; padding-left: 10%;">Navigation!</h2>
+            <ol><a href="/index.html" style="font-size: 150%">Home</a></ol>
+            <ol><a href="/aboutme.html" style="font-size: 150%">About Me</a></ol>
+            <h2 style="font-size: 150%; padding-left: 10%;">Projects</h2>
+            <ol><a href="/asteroidAvoid_index.html">Asteroid Avoid</a></ol>
+            <ol><a href="/plantSimulator_index.html">Plant Simulator</a></ol>
+            <ol><a href="/theMall_index.html">The Mall</a></ol>
+            <ol><a href="/thisWebsite_index.html">This Website</a></ol>
         </div>
-        <h2><a href="/index.html">Homepage</a></h2>
-        <h2><a href="/conceptart.html">Concept Art</a></h2>
-        <h2><a href="/project.html">About This Project</a></h2>
-        <h2><a href="/aboutme.html">About Me</a></h2>
-        <h2><a href="/demo.html">Demo?</a></h2>
-        <h2><a href="/bugreporting.html">Report a Bug!</a></h2>
+        <br><br>
+        <div id="navBarContactDetails">
+            <h2 style="font-size: 200%; padding-left: 10%;">Contact Me!</h2>
+            <h2 style="font-size: 150%; padding-left: 10%;">Socials</h2>
+            <ol><a href="https://github.com/amber-wolf0">GitHub (Personal)</a></ol>
+            <ol><a href="https://github.com/im2013">GitHub (University)</a></ol>
+            <ol><a href="https://www.linkedin.com/in/iona-moynihan-11ba15263/">LinkedIn</a></ol>
+            <h2 style="font-size: 150%; padding-left: 10%;">Email</h2>
+            <ol>ionamoynihan003@gmail.com</ol>
+        </div>
     </div>
-        <div id="content" :class="{ 'shifted': isVisibleNavBar }">
-            <div id="contentHeader">The Mall Devlog</div>
-            <h1>Latest Posts</h1>
-            <div id="posts">
-                <!--START OF POST-->
-                <a href="/posts/2024-08-28.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Major Asset Creation</h1>
-                            <h2>28-08-2024</h2>
-                            <p>Creating nearly 60 plants in Blender...</p>
-                        </div>
 
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/1Wl8-pan0Ew3d520enz0E3mQaW0p9drn6/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2024-08-14.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Early Phone Developments!</h1>
-                            <h2>14-08-2024</h2>
-                            <p>Creating a phone for the player.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/14ITD3RZXIWqlyh6BgFnIVtc-SG7KC0jh/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2024-07-18.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Beginning of Animations</h1>
-                            <h2>18-07-2024</h2>
-                            <p>3d modelling and animating the player character.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/1GT6swqffYJ15foCbeSlgj7vI1GSQKNLv/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2024-06-20.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Player Movement, Raycasting and Backpacks</h1>
-                            <h2>20-06-2024</h2>
-                            <p>Got the player moving and raycasting now, beginning to develop backpack mechanics.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/10l1ZY2YH-FxqaJdQ1oHfrBteln-2Ge2Z/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2024-06-17.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Reworked website!</h1>
-                            <h2>17-06-2024</h2>
-                            <p>Modifying this website's layout to ensure ease of use.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/1J0KE6Y44_57g4QNB2-uhAeanSpUJuE-b/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2024-06-16.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Prop Importation and Organisation</h1>
-                            <h2>16-06-2024</h2>
-                            <p>Organising the various props and objects the player will be interacting with.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/1_nLOO3QkASwT2tYyXvVGTDRfctOQus0_/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2024-05-23.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Mock up of Eggscellent!</h1>
-                            <h2>23-05-2024</h2>
-                            <p>Placing low-poly mock-up furniture within the store and deciding a good floor plan.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/1NAbb7kKBq4ehFPok0mCFYZWI8qdZVyXC/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2024-02-22.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Window/Glossy Shader</h1>
-                            <h2>22-02-2024</h2>
-                            <p>Creating a unique shader for reflections that matches the style of my game.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/1lFehyvsK53ynCxatwPFBT2mwIFOnwS3p/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="\posts\2024-02-20.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>ACCIDENTAL DELETION!</h1>
-                            <h2>20-02-2024</h2>
-                            <p>Accidentally deleted my ENTIRE PROJECT due to some issues with Github synchronisation.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/16x2auwXFgP1LavF_hAQUddREl-Z3JE9i/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="\posts\2024-02-17.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Movement and Phone Use</h1>
-                            <h2>17-02-2024</h2>
-                            <p>Making the player character move around the map, and early phone implementations.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/1CusNXg2E8qDHV8AQwoBGZ7My8_W4j-xI/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2024-01-07.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Escalator Woes</h1>
-                            <h2>07-01-2024</h2>
-                            <p>The difficulties with 3d modelling and animating escalators.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/19CQ_arH7BI_eNeNvcSriX4qE9pq5gMkG/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2024-01-06.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Settings Options</h1>
-                            <h2>06-01-2024</h2>
-                            <p>Creating a basic interface to let the user modify features using the settings.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/1kA5mS1Pl1Y-gO9nxNGmx_Bf1MKihp_r6/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2024-01-04.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Creating the Mall's roof</h1>
-                            <h2>04-01-2024</h2>
-                            <p>Blocking out the mall's roof using Unity's ProBuilder addon.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/1JzbqEN7wGsk97lrhLUR9IH7R2s5gtNDY/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2024-01-02.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Blocking out the layout</h1>
-                            <h2>02-01-2024</h2>
-                            <p>Blocking out the layout of the earlier version of the mall.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/1K1aaqS6Sjm-DB1e-Z-RhC13Mvg1VFd_q/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2023-12-23.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Gnoming about!</h1>
-                            <h2>23-12-2023</h2>
-                            <p>Creating gnomes for fun!</p>
-                        </div>
-
-                        <div id="postContent">
-                            <!-- <img src="" alt="thumbnail"> -->
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2023-12-22.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>3d Modelling some clothes and a wolf</h1>
-                            <h2>22-12-2023</h2>
-                            <p>Spent a day 3d modelling mostly clothes for the human character npcs.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/15jZA5Bc-lUwc7M9EtgrnvvHgAMeFIIyG/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2023.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Hairstyles</h1>
-                            <h2>~2023</h2>
-                            <p>Created hairstyles a while ago for the human npc model.</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/1JzhGkJWs85q9aAoyy2jxjzeIC-8ykwAW/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-                <!--START OF POST-->
-                <a href="/posts/2023-2.html">
-                    <div id="postBox">
-                        <div id="postHeader">
-                            <h1>Hound of Tindalos</h1>
-                            <h2>~2023</h2>
-                            <p>Creating a unique creature design for a dangerous opponent...</p>
-                        </div>
-
-                        <div id="postContent">
-                            <iframe src="https://drive.google.com/file/d/1tFb9WKuHCMInxRF1EI2lTYNd2zqpa3_s/preview" width="150" height="150" allow="autoplay"></iframe>
-                        </div>
-                    </div>
-                </a>
-                <!--end of post-->
-            </div>
+    <div id="content" :class="{ 'shifted': isVisibleNavBar }">
+        <div id="contentHeader">
+            <h1>My Portfolio</h1>
+            <h2>Iona Moynihan</h2>
         </div>
-</div>
+        <div id="portfolioContent">
+            <!--Plant Simulator-->
+            <a href="/asteroidAvoid_index.html" style="text-decoration: none; color: black; width: 45%; margin: 10px;">
+                <div id="projectBox">
+                    <iframe src="https://drive.google.com/file/d/1Wl8-pan0Ew3d520enz0E3mQaW0p9drn6/preview" width="90%" height="75%" style="margin-top: 10%; padding-top:5%;" allow="autoplay"></iframe>
+                    <h2>Asteroid Avoid</h2>
+                    <p style="margin-top: 0.1%;">Unity - C# - Action, Survival, Dissertation</p>
+                </div>
+            </a>
+            <!--Plant Simulator-->
+            <a href="/plantSimulator_index.html" style="text-decoration: none; color: black; width: 45%; margin: 10px;">
+                <div id="projectBox">
+                    <iframe src="https://drive.google.com/file/d/1T7_zpQn9OPyuteM-pVpl2ItVKkj1f1h8/preview" width="90%" height="75%" style="margin-top: 10%; padding-top:5%;" allow="autoplay"></iframe>
+                    <h2>Plant Simulator</h2>
+                    <p style="margin-top: 0.1%;">Unity - C# - Simulation, Realism, Learning</p>
+                </div>
+            </a>
+            <!--the mall-->
+            <a href="/theMall_index.html" style="text-decoration: none; color: black; width: 45%; margin: 10px;">
+                <div id="projectBox">
+                    <iframe src="https://drive.google.com/file/d/14cgCYdpIDvOMhJJOM2L-nTuXAb10t9KT/preview" width="90%" height="75%" style="margin-top: 10%; padding-top:5%;" allow="autoplay"></iframe>
+                    <h2>The Mall</h2>
+                    <p style="margin-top: 0.1%;">Unity - C# - Action, Adventure, Horror</p>
+                </div>
+            </a>
+            <!--This Website-->
+            <a href="/thisWebsite_index.html" style="text-decoration: none; color: black; width: 45%; margin: 10px;">
+                <div id="projectBox">
+                    <iframe src="https://drive.google.com/file/d/1UKjHRaEdksm8BaqH1S_oPjgjEz5jDu01/preview" width="90%" height="75%" style="margin-top: 10%; padding-top:5%;" allow="autoplay"></iframe>
+                    <h2>This Website</h2>
+                    <p style="margin-top: 0.1%;">Visual Studio Code - Node.js, Vue.js, Express.js</p>
+                </div>
+            </a>
+        </div> <!--id=portfolioContent-->
+    </div> <!--id=content-->
+</div> <!--id=container-->
 </body>
 <script>
     new Vue ({

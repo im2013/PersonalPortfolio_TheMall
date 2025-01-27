@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/asteroidAvoid.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h2>Implemented Gameplay Modes 1 and 2</h2>
+        <h3>02-01-2025</h3>
+        <p>Below is a very early version of gameplay, with only time keeping.</p>
+        <iframe src="https://drive.google.com/file/d/1038gyNOda9Eg13xHf6hghj8RpipQJ-WH/preview" width="640" height="480" allow="autoplay"></iframe>
+        <p>Now here is a finally implemented game mode 1, featuring health and time displayed at the top of the screen.</p>
+        <iframe src="https://drive.google.com/file/d/189r4YPJvY18IECWKaWJ2UI_ddA6inKXq/preview" width="640" height="480" allow="autoplay"></iframe>
+        <p>Off camera, I added a 2nd gamemode displaying the information on the screen of the alien ship.</p>
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+            currentPost: '/theMall_posts/2024-08-28.html', // Default post
+            posts: [
+                { title: 'Major Asset Creation', date: '28-08-2024', url: '/theMall_posts/2024-08-28.html' },
+            ]
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+            changePost(newUrl) {
+            this.currentPost = newUrl;
+            }
+        }
+    });
+
+
+</script>
+
+</html>

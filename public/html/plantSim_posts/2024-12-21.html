@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/plantSim.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Plant Simulator</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h2>Moving into Unity Engine</h2>
+        <h3>21-12-2024</h3>
+        <p>I've now moved the plant simulator into Unity Engine to provide more visuals.</p>
+        <p>I first added a 2d image projected onto a plane where the plant sits for different soil types.</p>
+        <iframe src="https://drive.google.com/file/d/1NFf9c1EO9INCPAwZLOjnSq6c4FUfWiEx/preview" width="640" height="480" allow="autoplay"></iframe>
+        <p>Afterwards, plant growth is inhibited if it is grown on a soil not suitable. I made sure to physically display this with the 3d model and the parameter for plant height and width.</p>
+        <iframe src="https://drive.google.com/file/d/1oIDWyVhirfiWxeU77IGt23K8wLZaGtGe/preview" width="640" height="480" allow="autoplay"></iframe>
+
+
+
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+            currentPost: '/theMall_posts/2024-08-28.html', // Default post
+            posts: [
+                { title: 'Post Title', date: '28-08-2024', url: '/theMall_posts/2024-08-28.html' },
+            ]
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+            changePost(newUrl) {
+            this.currentPost = newUrl;
+            }
+        }
+    });
+
+
+</script>
+
+</html>

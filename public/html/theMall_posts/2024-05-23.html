@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/theMall.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h2>Mock up of Eggscellent!</h2>
+                    <h3>23-05-2024</h3>
+                    <p>Finally beginning to develop again after the very stressful exam season, I spent a total of ~4hrs developing 3d models and
+                        placing them within the store to get an idea of what I want the final store to look like. I want it to be a warm, inviting place where 
+                        you can happily sit down and eat and relax with your friends.
+                        <br><br>
+                        I also created a new shader for the store front sign that makes use of the previously created window shader, where instead, I 
+                        added a option to add an image as an underlay.
+                        <br><br>
+                        TOOLS:
+                        <br>
+                        - Blender 3d
+                        <br>
+                        - Unity
+                    </p>
+                    <iframe src="https://drive.google.com/file/d/1igllIXITtw2wy0-Tf0VKfnMdAUW4qJ6E/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>^Placing mock furniture and getting a sense of scale.</p>
+                    <iframe src="https://drive.google.com/file/d/10vJN0BgEk-jb3UGJ13lblD7BMp7IXKRh/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1NAbb7kKBq4ehFPok0mCFYZWI8qdZVyXC/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>^New shader developed for the store front sign.</p>
+                    <iframe src="https://drive.google.com/file/d/18Mrv4fw0Li2Pt5yj7814_m8LCsYopZmv/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p></p>
+                    <iframe src="https://drive.google.com/file/d/188UB6ggrhYWyjsuRCjQBJPOJw2Ua-kNC/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>^Finalised mockup of the store.</p>
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+        }
+    });
+</script>
+
+</html>

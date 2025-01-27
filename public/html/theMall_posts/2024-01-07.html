@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/theMall.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h2>Escalator Woes</h2>
+                    <h3>07-01-2024</h3>
+                    <p>Creating an escalator was extremely tedious! I had to manually animate each step in the escalator BY HAND and I got the sizing wrong later 
+                        when placing within the mall- meaning I had to remodel AND REANIMATE BY HAND AGAIN!
+                    </p>
+                    <p>A very early concept of an escalator:</p>
+                    <iframe src="https://drive.google.com/file/d/1JoFgorF3a6_p82gV2IcND2lGOJ7elfhT/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>A rough animated escalator, this was very difficult to animate.</p>
+                    <iframe src="https://drive.google.com/file/d/1ZZXUAGQDf4ygDZKeKt01IGLav6fmOIef/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>The near final product:</p>
+                    <iframe src="https://drive.google.com/file/d/1bdsjUwwic6gXlOkKKs8xfOUIwzhhN5ov/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <p>Final product:</p>
+                    <iframe src="https://drive.google.com/file/d/19CQ_arH7BI_eNeNvcSriX4qE9pq5gMkG/preview" width="640" height="480" allow="autoplay"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1xiwcPW_dvMWskIKeCpwBHEekTaTCPJ18/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+        }
+    });
+</script>
+
+</html>

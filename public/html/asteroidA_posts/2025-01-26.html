@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/asteroidAvoid.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h2>Finalising Features</h2>
+        <h3>26-01-2025</h3>
+        <p>
+            A very cropped video displaying the most up-to-date version of Asteroid Avoid! I have managed to follow the advice of my supervisor, and decided to consider the 
+            following: adding more obvious left-right movement, spawning asteroids further out, speeding-up particles as the game goes on, and finally to 
+            make taking damage much more obvious per hit. I may consider adding up and down movement in further updates, but this is progress so far.
+        </p>
+        <iframe src="https://drive.google.com/file/d/1c6FKccb0TwTq59TA3JLYjqmuOAnbKX1R/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+            currentPost: '/theMall_posts/2024-08-28.html', // Default post
+            posts: [
+                { title: 'Major Asset Creation', date: '28-08-2024', url: '/theMall_posts/2024-08-28.html' },
+            ]
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+            changePost(newUrl) {
+            this.currentPost = newUrl;
+            }
+        }
+    });
+
+
+</script>
+
+</html>

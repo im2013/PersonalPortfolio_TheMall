@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/theMall.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>The Mall DevBlog</title>
+</head>
+<body>
+<div id="container">
+    <!-- v-if="isVisibleNavBar" -->
+    <button id="navbarButton" @click="toggleNavBar">SHOW NAVBAR</button>
+    <div id="navigationBar" :class="{ 'visible': isVisibleNavBar }">
+        <br>
+        <div id="navBarContactDetails">
+            <h2 style="font-size: 200%; padding-left: 10%;">Navigation!</h2>
+            <ol><a href="/index.html" style="font-size: 150%">Home</a></ol>
+            <ol><a href="/aboutme.html" style="font-size: 150%">About Me</a></ol>
+            <h2 style="font-size: 150%; padding-left: 10%;">Projects</h2>
+            <ol><a href="/asteroidAvoid_index.html">Asteroid Avoid</a></ol>
+            <ol><a href="/plantSimulator_index.html">Plant Simulator</a></ol>
+            <ol><a href="/theMall_index.html">The Mall</a></ol>
+            <ol><a href="/thisWebsite_index.html">This Website</a></ol>
+        </div>
+        <br><br>
+        <div id="navBarContactDetails">
+            <h2 style="font-size: 200%; padding-left: 10%;">Contact Me!</h2>
+            <h2 style="font-size: 150%; padding-left: 10%;">Socials</h2>
+            <ol><a href="https://github.com/amber-wolf0">GitHub (Personal)</a></ol>
+            <ol><a href="https://github.com/im2013">GitHub (University)</a></ol>
+            <ol><a href="https://www.linkedin.com/in/iona-moynihan-11ba15263/">LinkedIn</a></ol>
+            <h2 style="font-size: 150%; padding-left: 10%;">Email</h2>
+            <ol>ionamoynihan003@gmail.com</ol>
+        </div>
+    </div>
+
+    <div id="theMall_sideBar" :class="{ 'shifted': isVisibleNavBar }">
+        <!--posts here-->
+        <div id="theMall_postBox" v-for="(post, index) in posts" :key="index">
+            <a href="#" @click.prevent="changePost(post.url)">
+                <h1>{{ post.title }}</h1>
+                <h2>{{ post.date }}</h2>
+            </a>
+        </div>
+    </div>
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h1>The Mall Devlog</h1>
+        <p>A horror survival game where you are a mischevious child who believes they may be able to survive a demonic game within a mall. The mall is haunted with a dark 
+            history, and you must try and convince others to join in your horrifying game...
+            
+        </p>
+        <br>
+        <div id="content">
+            <iframe :src="currentPost" width="100%" height="600px" style="border: none;"></iframe>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+            currentPost: '/theMall_posts/2024-08-28.html', // Default post
+            posts: [
+                { title: 'Major Asset Creation', date: '28-08-2024', url: '/theMall_posts/2024-08-28.html' },
+                { title: 'Early Phone Developments!', date: '14-08-2024', url: '/theMall_posts/2024-08-14.html' },
+                { title: 'Beginning of Animations', date: '18-07-2024', url: '/theMall_posts/2024-07-18.html' },
+                { title: 'Player Movement, Raycasting and Backpacks', date: '20-06-2024', url: '/theMall_posts/2024-06-20.html' },
+                { title: 'Prop Importation and Organisation', date: '16-06-2024', url: '/theMall_posts/2024-06-16.html' },
+                { title: 'Mock up of Eggscellent!', date: '23-05-2024', url: '/theMall_posts/2024-05-23.html' },
+                { title: 'Window/Glossy Shader', date: '22-02-2024', url: '/theMall_posts/2024-02-22.html' },
+                { title: 'ACCIDENTAL DELETION', date: '20-02-2024', url: '/theMall_posts/2024-02-20.html' },
+                { title: 'Movement and Phone Use', date: '17-02-2024', url: '/theMall_posts/2024-02-17.html' },
+                { title: 'Escalator Woes', date: '07-01-2024', url: '/theMall_posts/2024-01-07.html' },
+                { title: 'Settings Options', date: '06-01-2024', url: '/theMall_posts/2024-01-06.html' },
+                { title: 'Creating the Mall`s Roof', date: '04-01-2024', url: '/theMall_posts/2024-01-04.html' },
+                { title: 'Blocking out the Layout', date: '02-01-2024', url: '/theMall_posts/2024-01-02.html' },
+                { title: 'Gnoming about!', date: '23-12-2023', url: '/theMall_posts/2023-12-23.html' },
+                { title: '3d Modelling some clothes and a Wolf', date: '22-12-2023', url: '/theMall_posts/2023-12-22.html' },
+                { title: 'Hound of Tindalos', date: 'xx-2-2023', url: '/theMall_posts/2023-2.html' },
+                { title: 'Hairstyles', date: 'xx-xx-2023', url: '/theMall_posts/2023.html' },
+            ]
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+            changePost(newUrl) {
+            this.currentPost = newUrl;
+            }
+        }
+    });
+
+
+</script>
+
+</html>
