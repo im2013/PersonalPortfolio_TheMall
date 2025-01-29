@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/creatureCreator.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Creature Creator</title>
+</head>
+<body>
+<div id="container">
+    <div id="theMall_content" :class="{ 'shifted': isVisibleNavBar }">
+        <h2>Starting Up!</h2>
+        <h3>29-01-2025</h3>
+        <p>I created a rough skeleton to experiment on first. Using a bezier curve to place numerous "spine bones" to create a spine. Later, I added a pelvis and a skull.</p>
+        <p>Below is the basic spine mechanics- allowing you to move the spine as needed.</p>
+        <iframe src="https://drive.google.com/file/d/1RMF7lXH_8OEi5szlSPZFuhriAz4MJ9ZE/preview" width="640" height="480" allow="autoplay"></iframe>
+        <p>Later, I added a skull and pelvis, which can be rotated. The pelvis can be removed, as well as the number of spines increased and decreased by using the 
+            basic UI.
+        </p>
+        <iframe src="https://drive.google.com/file/d/1BEMu2ozbCPqnTOzA7_2aPLeklOEwn1Mi/preview" width="640" height="480" allow="autoplay"></iframe>
+    </div>
+</div>
+</body>
+<script>
+    new Vue ({
+        el: '#container',
+        data: {
+            isVisibleNavBar: false,
+            currentPost: '/theMall_posts/2024-08-28.html', // Default post
+            posts: [
+                { title: 'Starting Up!', date: '29-01-2025', url: '/creatureC_posts.html' },
+            ]
+        },
+        onmount() {
+        },
+        methods: {
+            toggleNavBar() {
+                this.isVisibleNavBar = !this.isVisibleNavBar;
+            },
+            changePost(newUrl) {
+            this.currentPost = newUrl;
+            }
+        }
+    });
+
+
+</script>
+
+</html>
