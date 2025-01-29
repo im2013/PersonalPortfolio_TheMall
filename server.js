@@ -62,10 +62,15 @@ app.get('/asteroidAvoid_index.html', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', 'asteroidAvoid_index.html'));
 });
 
+app.get('/creatureCreator_index.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'html', 'creatureCreator_index.html'));
+});
+
 app.use('/theMall_posts', express.static(path.join(__dirname, 'public', 'html', 'theMall_posts')));
 app.use('/plantSim_posts', express.static(path.join(__dirname, 'public', 'html', 'plantSim_posts')));
 app.use('/asteroidA_posts', express.static(path.join(__dirname, 'public', 'html', 'asteroidA_posts')));
 app.use('/thisWebsite_posts', express.static(path.join(__dirname, 'public', 'html', 'thisWebsite_posts')));
+app.use('/creatureC_posts', express.static(path.join(__dirname, 'public', 'html', 'creatureC_posts')));
 
 app.use('/images', express.static(path.join(__dirname, 'public', 'images')));
 app.use('/html', express.static(path.join(__dirname, 'public', 'html')));
